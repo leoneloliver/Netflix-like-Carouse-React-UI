@@ -4,6 +4,7 @@ var App = React.createClass({
       movies: []
     }
   },
+  
   componentDidMount: function() {
     // Is there a React-y way to avoid rebinding `this`? fat arrow?
     var th = this;
@@ -15,9 +16,11 @@ var App = React.createClass({
           });
         })
   },
+  
   componentWillUnmount: function() {
     this.serverRequest.abort();
   },
+  
   render: function() {
     return (
       <div className="div-master">
@@ -46,5 +49,14 @@ var App = React.createClass({
   }
 });
 
+
+
 React.render(<App source="https://s3.amazonaws.com/popular-movies/movies.json" />, document.querySelector("#app"));
+
+
+
+
+
+
+
 
