@@ -1,7 +1,4 @@
-// Code goes here
-
 $(document).ready(function() {
-
   function Arrows(){
     function moveL(){
       var leftPos = $('.div-master').scrollLeft();   
@@ -9,14 +6,12 @@ $(document).ready(function() {
             scrollLeft: leftPos - 500
         }, 800);
     }
-    
     function moveR(){
       var leftPos = $('.div-master').scrollLeft();
         $(".div-master").animate({
             scrollLeft: leftPos + 500
         }, 800);
     }
-
     $('.before').on('click', function(){
       moveL();
     });
@@ -24,13 +19,11 @@ $(document).ready(function() {
       moveR();
     });
   }
-
   function showImages(){
     $(".item-c img").each(function(index) {
       var times = (index*100);
       setTimeout(function(){ $(".item-c img").eq(index).addClass("show-it"); }, times);
-    });
-    
+    }); 
   }
   function showList(){
     $(".item-list img").each(function(index) {
@@ -46,5 +39,4 @@ $(document).ready(function() {
     showList();
     Arrows();
   },2000);
-  
 });
